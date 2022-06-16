@@ -10,7 +10,9 @@ using McMaster.Extensions.CommandLineUtils;
 namespace CSharpToTypeScript.CLITool.Commands
 {
     [Command(Name = "dotnet cs2ts", Description = "Convert C# Models, ViewModels and DTOs into their TypeScript equivalents"),
-    Subcommand(typeof(InitializeCommand))]
+        Subcommand(typeof(InitializeCommand)),
+        Subcommand(typeof(VersionCommand))
+    ]
     public class ConvertCommand : CommandBase
     {
         private readonly ICodeConverter _codeConverter;

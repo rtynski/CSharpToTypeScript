@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpToTypeScript.Core", "CSharpToTypeScript.Core\CSharpToTypeScript.Core.csproj", "{5D8BD98E-C440-4E57-9962-D1D2B7B975EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpToTypeScript.CLITool", "CSharpToTypeScript.CLITool\CSharpToTypeScript.CLITool.csproj", "{0E9849D5-B0E3-44C0-83F0-B66D7B735498}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5D8BD98E-C440-4E57-9962-D1D2B7B975EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D8BD98E-C440-4E57-9962-D1D2B7B975EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D8BD98E-C440-4E57-9962-D1D2B7B975EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D8BD98E-C440-4E57-9962-D1D2B7B975EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E9849D5-B0E3-44C0-83F0-B66D7B735498}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E9849D5-B0E3-44C0-83F0-B66D7B735498}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E9849D5-B0E3-44C0-83F0-B66D7B735498}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E9849D5-B0E3-44C0-83F0-B66D7B735498}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1ED8306-DEA7-4181-8357-E5906B8114D0}
+	EndGlobalSection
+EndGlobal

@@ -1,6 +1,7 @@
 using CSharpToTypeScript.CLITool.Commands;
 using CSharpToTypeScript.Core.Options;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace CSharpToTypeScript.CLITool
 {
@@ -37,6 +38,7 @@ namespace CSharpToTypeScript.CLITool
         public ImportGenerationMode? ImportGeneration { get; set; }
         public QuotationMark? QuotationMark { get; set; }
         public bool? AppendNewLine { get; set; }
+        public IDictionary<string,string>? GlobalImport { get; set; }
 
         public void Override(CommandBase command)
         {

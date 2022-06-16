@@ -53,6 +53,11 @@ To create optional configuration file (`cs2tsconfig.json`) in current directory 
 dotnet cs2ts init
 ```
 
+## Get project version
+```cmd
+dotnet cs2ts version
+```
+
 ### Content
 
 ```json
@@ -95,4 +100,10 @@ Run:
 
 ```cmd
 dotnet watch cs2ts ./DTOs -o ./wwwroot/ts/models
+```
+# For developers
+## Install local from project
+```
+dotnet tool uninstall --global CSharpToTypeScript.CLITool
+dotnet tool install --global --add-source ./nupkg CSharpToTypeScript.CLITool
 ```

@@ -2,6 +2,7 @@ using CSharpToTypeScript.CLITool.Utilities;
 using CSharpToTypeScript.CLITool.Validation;
 using CSharpToTypeScript.Core.Options;
 using McMaster.Extensions.CommandLineUtils;
+using System.Collections.Generic;
 
 namespace CSharpToTypeScript.CLITool.Commands
 {
@@ -62,6 +63,8 @@ namespace CSharpToTypeScript.CLITool.Commands
 
         [Option(ShortName = "anl", Description = "Append new line to end of file (removes TSLint warning)")]
         public bool AppendNewLine { get; set; }
+        public IDictionary<string, string> GlobalImport { get; set; } = new Dictionary<string, string>();
+        
 
         private void OnBeforeArgumentsSet()
         {
