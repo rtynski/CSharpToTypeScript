@@ -25,17 +25,32 @@ namespace CSharpToTypeScript.Core.Models
             var context = new Context();
 
             return // imports
-                (Imports.Select(i =>
-                        // type
-                        "import { " + i.TransformIf(options.RemoveInterfacePrefix, StringUtilities.RemoveInterfacePrefix) + " }"
-                        // module
-                        + " from " + ("./" + ModuleNameTransformation.Transform(i, options)).InQuotes(options.QuotationMark) + ";")
-                    .Distinct().LineByLine()
-                + EmptyLine).If(Imports.Any() && options.ImportGenerationMode != ImportGenerationMode.None)
+                (
+                    GetImports(options).LineByLine() + EmptyLine
+                ).If(Imports.Any() && options.ImportGenerationMode != ImportGenerationMode.None)
                 // types
                 + RootNodes.WriteTypeScript(options, context).ToEmptyLineSeparatedList()
                 // empty line at the end
                 + NewLine.If(options.AppendNewLine);
+        }
+
+        private IEnumerable<string> GetImports(CodeConversionOptions options)
+        {
+            return Imports.Select(i => GenerateImport(i, options)).Distinct();
+        }
+
+        private string GenerateImport(string name, CodeConversionOptions options)
+        {
+            var importName = name.TransformIf(options.RemoveInterfacePrefix, StringUtilities.RemoveInterfacePrefix);
+            var importPath = ("./" + ModuleNameTransformation.Transform(name, options));
+            if (options.GlobalImport.ContainsKey(importName))
+            {
+                importPath = options.GlobalImport[importName];
+            }
+            // type
+            return "import { " + importName + " }"
+            // module
+            + " from " + importPath.InQuotes(options.QuotationMark) + ";";
         }
     }
 }
