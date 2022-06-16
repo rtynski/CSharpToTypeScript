@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<OutputType>Exe</OutputType>
@@ -9,7 +9,7 @@
 		<PackAsTool>true</PackAsTool>
 		<ToolCommandName>dotnet-cs2ts</ToolCommandName>
 		<PackageOutputPath>./nupkg</PackageOutputPath>
-		<PackageId>CSharpToTypeScript.CLITool</PackageId>
+		<PackageId>CSharpToTypeScript.CLI</PackageId>
 		<Version>0.0.1</Version>
 		<Authors>AdrianWilczynski, RafalTynski</Authors>
 		<PackageDescription>Convert C# Models into their TypeScript equivalents.</PackageDescription>
