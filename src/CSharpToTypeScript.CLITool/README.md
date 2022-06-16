@@ -98,12 +98,18 @@ Add `Exec` task to `.csproj` file.
 
 Run:
 
-```cmd
+```powershell
 dotnet watch cs2ts ./DTOs -o ./wwwroot/ts/models
 ```
 # For developers
-## Install local from project
-```
+## Remove older project
+```powershell
 dotnet tool uninstall --global CSharpToTypeScript.CLITool
-dotnet tool install --global --add-source ./nupkg CSharpToTypeScript.CLITool
 ```
+## Install locally project
+```powershell
+dotnet pack -c release
+dotnet tool install --global --add-source ./nupkg CSharpToTypeScript.CLI
+dotnet cs2ts version
+```
+> 0.0.1
