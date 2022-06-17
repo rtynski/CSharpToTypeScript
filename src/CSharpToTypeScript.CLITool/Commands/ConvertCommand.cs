@@ -25,9 +25,20 @@ namespace CSharpToTypeScript.CLITool.Commands
         }
 
         public CodeConversionOptions CodeConversionOptions
-            => new CodeConversionOptions(!SkipExport, UseTabs, TabSize, ConvertDatesTo, ConvertNullablesTo,
-                !PreserveCasing, !PreserveInterfacePrefix,
-                ImportGeneration, UseKebabCase, AppendModelSuffix, QuotationMark, AppendNewLine);
+            => new CodeConversionOptions(
+                !SkipExport,
+                UseTabs,
+                TabSize,
+                ConvertDatesTo,
+                ConvertNullablesTo,
+                !PreserveCasing,
+                !PreserveInterfacePrefix,
+                ImportGeneration,
+                UseKebabCase,
+                AppendModelSuffix,
+                QuotationMark,
+                AppendNewLine,
+                globalImport: GlobalImport);
 
         public void OnExecute()
         {

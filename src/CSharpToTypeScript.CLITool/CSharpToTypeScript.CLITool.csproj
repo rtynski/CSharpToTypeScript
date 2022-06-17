@@ -10,7 +10,7 @@
 		<ToolCommandName>dotnet-cs2ts</ToolCommandName>
 		<PackageOutputPath>./nupkg</PackageOutputPath>
 		<PackageId>CSharpToTypeScript.CLI</PackageId>
-		<Version>0.0.1</Version>
+		<Version>0.0.2</Version>
 		<Authors>AdrianWilczynski, RafalTynski</Authors>
 		<PackageDescription>Convert C# Models into their TypeScript equivalents.</PackageDescription>
 		<PackageIcon>icon.png</PackageIcon>
